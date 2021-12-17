@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Seltore</title>
+    <style>
+        .p1
+        {
+            float:left;
+            padding: 6px;
+        }
+
+        .p2
+        {
+            font-size: 144px;
+            
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dulce Seltore</h2>
+    <p class='p2'><a href="{{ user }}", target="_blank">instagram Dulce Solter</p>
+    {% for user in users %}
+        {% if user.name == 'dulce solter'%}
+            {%for pic in user.picture.all%}
+                <p class="p1"><img src="{{pic.image.url}}" alt=""></p>
+            {%endfor%}
+        {%endif%}
+    {% endfor %}
+</body>
+</html>
